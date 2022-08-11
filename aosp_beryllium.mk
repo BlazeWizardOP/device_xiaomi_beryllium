@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2022 The LineageOS Project
+# Copyright (C) 2015-2022 The AOSP Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,14 +8,21 @@ $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
 # Inherit some common Elixir stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_STOCK_ACORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 EXTRA_UDFPS_ANIMATIONS := false
 IS_PHONE := true
+
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# Lawnchair Launcher
+FORCE_LAWNCHAIR := true
 
 # Official
 ELIXIR_MAINTAINER := Rahul Gorai
